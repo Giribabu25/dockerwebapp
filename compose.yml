@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   devopsdb:
-    image: giribabub/myapp:appimage
+    image: giribabub/myapp:dbimage
     ports:
       - "3306:3306"
     deploy:
@@ -11,7 +11,7 @@ services:
       - mynetwork
 
   application:
-    image: giribabub/myapp:dbimage
+    image: giribabub/myapp:appimage
     ports:
       - "1111:8080"
     deploy:
